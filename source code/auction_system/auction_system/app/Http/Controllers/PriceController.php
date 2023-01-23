@@ -49,10 +49,12 @@ class PriceController extends Controller
     public function price()
 
     {
+        $user = Auth::user();
+
         $prices = DB::table('prices')
             ->join('users', 'prices.user_id', '=', 'users.id')
             ->join('products', 'prices.product_id', '=', 'products.id')
-            ->select('prices.*', 'users.name','products.name_product','products.image')
+            ->select('prices.*', 'users.name','products.name_product','products.image' ,'products.user_id')
             ->get();
 
         // $products = Product::orderBy('id','desc')->paginate(5);

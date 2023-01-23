@@ -55,7 +55,7 @@
                         {{ $price->name}}	
                     </td>
                     <td class="align-middle text-center text-sm">
-                        {{ $price->price}}	
+                        {{ $price->price}}	  JOD
                     </td>
 
                     <td class="align-middle text-center text-sm">
